@@ -1,0 +1,8 @@
+version: '2'
+services:
+  waigor: 
+    image: twhtanghk/waigor
+    volumes:
+      - ./data:/usr/src/app/data
+    env_file: 
+      - ./.env

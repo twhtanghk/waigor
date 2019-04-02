@@ -1,0 +1,23 @@
+{
+  "name": "waigor",
+  "version": "0.0.1",
+  "description": "Wai Gor Web Scraper",
+  "main": "index.coffee",
+  "scripts": {
+    "test": "coffee test/index.coffee"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/twhtanghk/waigor.git"
+  },
+  "author": "Tommy Tang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/twhtanghk/waigor/issues"
+  },
+  "homepage": "https://github.com/twhtanghk/waigor#readme",
+  "dependencies": {
+    "aastocks": "https://github.com/twhtanghk/aastocks",
+    "coffeescript": "^2.4.0"
+  }
+}
