@@ -54,15 +54,15 @@ class WaiGor
       page = await @newPage()
       await page.goto link, WaiGor.waitOpts
       while true
-        elem = await page.$ '.loadmore'
-        if null == await elem.$ '.hidden'
-          break
-        else
+        debugger
+        elem = await page.$ '.loadmore.hidden'
+        if null == elem
           await Promise.all [
             page.waitForSelector '.loadmore a'
             page.click '.loadmore a'
-            page.waitForNavigation WaiGor.waitOpts
           ]
+        else
+          break
       for i in await page.$$ 'li.comment .comment-block'
         user = await @text page, await i.$('.comment-header > cite > a')
         date = await @text page, await i.$('.comment-header > .datetime > a')
